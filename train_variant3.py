@@ -20,13 +20,9 @@ device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 # output_dir = "output_35+1_random_suffix_retest_unpretrain/"
 pretrain = False
 pretrained_model = '/scratch/uceehj1/dt/output_35+1_random__/checkpoint-13500'
-# function_path = 'Hundredfunction_Hundredmean'
-# penalty = 0.02
 
 train_data_path = sys.argv[1]
 output_dir = sys.argv[2]
-penalty = float(sys.argv[3])
-function_path = sys.argv[4]
 
 class MyDataset(Dataset):
     def __init__(self, data_path):
@@ -202,4 +198,3 @@ trainer = Trainer(
 )
 
 trainer.train()
-# subprocess.call(['python', 'for_compare_test_4.py', output_dir, train_data_path, str(penalty), function_path])

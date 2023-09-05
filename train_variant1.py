@@ -20,11 +20,9 @@ device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 # output_dir = "output_20_plot_changed_retest_5e-4/"
 pretrain = False
 pretrained_model = 'output_31_plot_changed_retest_5e-4/checkpoint-600000'
-# penalty = 0.00
+
 train_data_path = sys.argv[1]
 output_dir = sys.argv[2]
-penalty = float(sys.argv[3])
-function_path = sys.argv[4]
 
 class MyDataset(Dataset):
     def __init__(self, data_path):
@@ -169,4 +167,3 @@ trainer = Trainer(
 )
 
 trainer.train()
-#subprocess.call(['python', 'for_compare_test_2.py', output_dir, train_data_path, str(penalty), function_path])
