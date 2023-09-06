@@ -4,8 +4,11 @@ Our project aims to have the Decision Transformer model find the extreme points 
 
 We developed three model variants, their architectures are shown below:
 
+Variant 1：
 ![Model Variant 1](Image/variant1.JPG)
+Variant 2：
 ![Model Variant 2](Image/variant2.JPG)
+Variant 3：
 ![Model Variant 3](Image/variant3.JPG)
 
 ## To generate the dataset to train/test these model, there are two steps. 
